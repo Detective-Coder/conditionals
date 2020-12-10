@@ -111,14 +111,8 @@ if (time === "7:30 AM" && isHungry === true) {
   console.log("Have a cookie anyway!");
 }
 
-// In your JavaScript file, declare a new variable called grade and give it a number value between 0 and 100.
-let grade = 50;
-// Write a conditional that converts the number grade to a letter grade:
-// If the value of grade is greater than or equal to 0 and less than or equal to 69, log "You got an F" to the console.
-// If it's between 70 and 76, log "You got a D" to the console.
-// If it's between 77 and 84, log "You got a C" to the console.
-// If it's between 84 and 92, log "You got a B" to the console.
-// If it's between 93 and 100, log "You got an A" to the console.
+let grade = 100;
+
 if (grade >= 0 && grade <= 69) {
   console.log("You got an F");
 } else if (grade >= 70 && grade <= 76) {
@@ -126,8 +120,62 @@ if (grade >= 0 && grade <= 69) {
 } else if (grade >= 77 && grade <= 84) {
   console.log("You got a C");
 } else if (grade >= 85 && grade <= 92) {
-  console.log()
+  console.log("You got a B"); 
+} else if (grade >= 93 && grade <= 100) {
+  console.log("You got an A");
+} else {
+  console.log("We don't know what you got.");
 }
 
 
+// If all of the high temperatures in the three day forecast are below 40, log "It's going to be cold as heck all week!" to the console.
+// If any of the low temperatures are below 20, log a sentence about the specific day. (Example: "Wednesday will be cold as heck!")
+// If any of the high temperatures are above 95, log a sentence about the specific day. (Example: "Thursday will be hot as heck!")
+
+let weatherForecast = [
+  {
+   day: "Today",
+   temperature: {
+     high: 39,
+     low: 32
+   },
+   conditions: "sunny",
+   astronomy: {
+     sunrise: "7:43 AM",
+     sunset: "5:09 PM"
+   }
+  },
+  {
+   day: "Saturday",
+   temperature: {
+     high: 39,
+     low: 29
+    },
+   conditions: "cloudy",
+   astronomy: {
+     sunrise: "7:44 AM",
+     sunset: "5:08 PM"
+   }
+  },
+  {
+   day: "Sunday",
+   temperature: {
+     high: 39,
+     low: 35
+    },
+   conditions: "chance of rain",
+   astronomy: {
+     sunrise: "7:45 AM",
+     sunset: "5:07 PM"
+   }
+  }
+ ]
+
+ // If all the high temperatures in the three day forecast are above 85, log, "It's going to be hot as heck all week!" to the console.
+ // If all of the high temperatures in the three day forecast are below 40, log "It's going to be cold as heck all week!" to the console.
+ if (weatherForecast[0].temperature.high > 85 && weatherForecast[1].temperature.high > 85 && weatherForecast[2].temperature.high > 85) {
+   console.log("It's going to be hot as heck all week!");
+ } else if (weatherForecast[0].temperature.high < 40 && weatherForecast[1].temperature.high < 40 && weatherForecast[2].temperature.high < 40) {
+  console.log("It's going to be cold as heck all week!");
+ }
 
