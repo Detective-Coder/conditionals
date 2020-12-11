@@ -146,7 +146,7 @@ let weatherForecast = [
    day: "Saturday",
    temperature: {
      high: 39,
-     low: 29
+     low: 19
     },
    conditions: "cloudy",
    astronomy: {
@@ -158,7 +158,7 @@ let weatherForecast = [
    day: "Sunday",
    temperature: {
      high: 39,
-     low: 35
+     low: 19
     },
    conditions: "chance of rain",
    astronomy: {
@@ -180,3 +180,8 @@ let weatherForecast = [
     console.log(`${weatherForecast[0].day} will be cold as heck!`);
  }
 
+for (let i = 0; i < weatherForecast.length; i++) {
+  if (weatherForecast[i].temperature.low < 20) {
+    console.log(`${weatherForecast[i].day} will be cold as heck!}`);
+  }
+}
