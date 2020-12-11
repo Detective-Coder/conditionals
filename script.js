@@ -127,17 +127,14 @@ if (grade >= 0 && grade <= 69) {
   console.log("We don't know what you got.");
 }
 
-
-// If all of the high temperatures in the three day forecast are below 40, log "It's going to be cold as heck all week!" to the console.
-// If any of the low temperatures are below 20, log a sentence about the specific day. (Example: "Wednesday will be cold as heck!")
 // If any of the high temperatures are above 95, log a sentence about the specific day. (Example: "Thursday will be hot as heck!")
 
 let weatherForecast = [
   {
-   day: "Today",
+   day: "Friday",
    temperature: {
      high: 39,
-     low: 32
+     low: 19
    },
    conditions: "sunny",
    astronomy: {
@@ -177,5 +174,9 @@ let weatherForecast = [
    console.log("It's going to be hot as heck all week!");
  } else if (weatherForecast[0].temperature.high < 40 && weatherForecast[1].temperature.high < 40 && weatherForecast[2].temperature.high < 40) {
   console.log("It's going to be cold as heck all week!");
+ }
+ // If any of the low temperatures are below 20, log a sentence about the specific day. (Example: "Wednesday will be cold as heck!")
+ if (weatherForecast[0].temperature.low < 20) {
+    console.log(`${weatherForecast[0].day} will be cold as heck!`);
  }
 
